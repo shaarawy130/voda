@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Createacc page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="gedid">
+    <ion-title >Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <form  (submit)="CreateAcc()" >
+
+   <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email  type="email" [(ngModel)] = "user.email" name="email"
+        placeholder="Your email address">
+       
+          </ion-input>
+    </ion-item> 
+
+     <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input #password  type="password"  [(ngModel)] = "user.password" name="password"
+        placeholder="Your password">
+        </ion-input>
+    </ion-item>
+
+    <ion-item>
+  <ion-label>Joining Date</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" min="2016" max="2017-10-31" [(ngModel)]="user.DateJoin" name="JoinDate" ></ion-datetime>
+</ion-item>
+ <ion-item>
+  <ion-label>Ending Date</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" min="2016" max="2017-10-31" [(ngModel)]="user.DateEnd" name="EndDate"></ion-datetime>
+</ion-item>
+  
+  <button ion-button color="gedid" block type="submit">
+      Create Account
+    </button>
+
+   
+
+</form>
+
+   
+
+</ion-content>
+

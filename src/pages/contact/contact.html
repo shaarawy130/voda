@@ -1,0 +1,36 @@
+<ion-header >
+  <ion-navbar color="gedid">
+       <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      InnoGarage
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-segment [(ngModel)]="selection" (ionChange)="updateUserData()" color="gedid">
+        <ion-segment-button value="current">
+            Current
+        </ion-segment-button>
+        <ion-segment-button value="2016">
+            Past
+        </ion-segment-button>
+        <ion-segment-button value="2017">
+            Supervisor
+        </ion-segment-button>
+    </ion-segment>
+
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item detail-push *ngFor="let user of users" (click)="click(user)">
+        <ion-avatar item-left>
+      <img src={{user?.img}}>
+    </ion-avatar>
+      <h1> {{user?.name}} </h1>     
+      <p> I'm doing my {{user?.type}}</p>   
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

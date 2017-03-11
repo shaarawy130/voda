@@ -1,0 +1,127 @@
+page-home {
+ion-header{
+ background: darkred !important;
+
+ ion-navbar{
+   background: darkred !important;
+ }
+
+ ion-title{
+   //background: darkred;
+ }
+}
+
+  ion-content {
+    background-image: url('../assets/img/pattern.jpg') !important;
+    -webkit-background-image: url('../assets/img/pattern.jpg') !important;
+    background-position: initial initial !important;
+    background-repeat: initial initial !important;
+    //background-color: red !important;
+   
+  
+ .container .profile img {
+    width: 35vw;
+    height: 35vw;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    object-fit: cover;
+    text-align: center;
+  }
+  .container .pics img {
+    width: 15vw;
+    height: 15vw;
+    //border-radius: 100%;
+   position: relative;
+    top: -10vw;
+    bottom: 0;
+    left: 65vw;
+    right: 0 ;
+    border:3px solid white;
+    //position: element(#target);
+  // margin: auto;
+    object-fit: cover;
+    text-align: center !important; 
+  }
+  .facebook img {
+        background-size:contain;
+          background-position: 50%;
+  
+       background-repeat: no-repeat;
+  background-position: 50%;
+      background-size: 21px; // square icon
+  }
+  .container .pics .pics1 img {
+    width: 17vw;
+    height: 17vw;
+    //border-radius: 100%;
+   position: absolute;
+    top: 10vw;
+    bottom: 0;
+    left: 0vw;
+    right: 0 ;
+    border:3px solid white;
+    //position: element(#target);
+  // margin: auto;
+    object-fit: cover;
+    text-align: center !important; 
+  }
+
+    .container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    
+  }
+      .cont {
+   color:white !important;
+    text-align: center;
+    
+  }
+  .container .profile{
+    position: relative;
+    overflow: hidden;
+    height: 24vh;
+    text-align: center;
+   // margin-bottom: -10px;
+  }
+  .adeek{
+  // background-color: transparent !important;
+  opacity: 0.6 !important;
+  }
+  ion-list{
+    text-align: center !important;
+    width: 80vw;
+    margin:0;
+    padding: 0;
+   // padding-right:10%;
+   align-items: center;
+    
+    
+  }
+  ion-row{
+     text-align: center !important;
+    
+   // padding-right:10%;
+   align-items: center;
+  }
+  ion-item{
+      background-color: darkred !important;
+      color: white !important;
+      font-size: 3.2vw !important;
+  //    color: red !important;
+
+  h2{
+    font-size: 3.2vw !important;
+  }
+  ion-icon{
+    font-size: 3.2vw;
+  }
+      
+  }
+  }
+}

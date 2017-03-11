@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "voda";
+  src: url('../assets/fonts/voda.eot');
+  src: url('../assets/fonts/voda.eot?#iefix') format('eot'),
+  url('../assets/fonts/voda.woff2') format('woff2'),
+  url('../assets/fonts/voda.woff') format('woff'),
+  url('../assets/fonts/voda.ttf') format('truetype'),
+  url('../assets/fonts/voda.svg#voda') format('svg');
+}
+
+@mixin voda-styles {
+  font-family: "voda";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%voda {
+  @include voda-styles;
+}
+
+@function voda-char($filename) {
+  $char: "";
+
+  @if $filename == voda {
+  $char: "\E001";
+}
+
+@return $char;
+}
+
+@mixin voda($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %voda;
+  } @else {
+    @include voda-styles;
+  }
+  content: voda-char($filename);
+}
+}
+
+.voda-voda {
+  @include voda(voda);
+}

@@ -1,0 +1,50 @@
+<ion-menu [content]="nav" side="left" id="menu1">
+
+
+<div class="menuBlur"></div>
+  <ion-content class="conti">
+     
+      <!--  <img src="{{(user|async) ?.img }}" /> -->
+
+<div class="menu">
+           <ion-avatar item-left>
+      <img class="sideImg" src="{{user?.img}}" menuClose (click)="openProfile()" >
+    </ion-avatar>
+    <h1 class="sideName">{{user?.name}}</h1>
+    <ion-list>
+         <ion-item class="sideItem">
+            Doing : {{user?.type}} </ion-item>
+         <ion-item class="sideItem">
+            University : {{user?.university}} </ion-item>
+             <ion-item class="sideItem">
+            Skills : {{user?.Skills}} </ion-item>
+             <ion-item class="sideItem">
+            JoinDate : {{user?.JoinDate}} </ion-item>
+             <ion-item class="sideItem">
+            EndDate : {{user?.EndDate}} </ion-item>
+             <ion-item class="sideItem">
+            Email : {{user?.email}} </ion-item>
+             <ion-item class="sideItem">
+            Phone : {{user?.phone}} </ion-item>
+
+ <ion-item class="options" *ngIf="isAdmin" menuClose no-lines (click)="createUser()">
+        <ion-icon item-right></ion-icon>
+        Create User
+      </ion-item>
+
+         <ion-item class="options"menuClose no-lines (click)="openProfile()">
+        <ion-icon item-right></ion-icon>
+        Edit Profile
+      </ion-item>
+      <ion-item class="options"menuClose no-lines (click)="logout()">
+        <ion-icon item-right name="md-log-out"></ion-icon>
+        Logout
+      </ion-item>
+ 
+    </ion-list>
+    </div>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #nav [root]="rootPage"></ion-nav>

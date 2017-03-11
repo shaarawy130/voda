@@ -1,0 +1,208 @@
+
+
+<!-- <ion-header background-color="darkred">
+<ion-navbar color="gedid" hideBackButton="true">
+    <ion-title>
+      Profile
+    </ion-title>
+</ion-navbar>
+</ion-header> -->
+
+
+<ion-header background-color="darkred">
+  <ion-navbar  color="gedid" hideBackButton="false">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit your profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<!--  <div *ngIf="isMember"> -->
+  <div class="container">
+    <!-- User Info -->
+    
+   <!--  <div *ngIf="user">-->
+
+    
+      <div class="profile">
+      <!--  <img src="{{(user|async) ?.img }}" /> -->
+      <img src="{{user?.img }}" (click)="click()"/>
+      </div>
+      
+     
+      <!-- Show icon of logged in provider -->
+      <div class="cont">
+  <!--     <h4 ><span >{{(item|async) ?.name }} </span>-->
+<h4 ><span >{{user?.name }} </span>
+       
+      </h4>
+      
+      <p >{{user?.email }}</p> 
+    </div>
+    <!-- Profile Menu -->
+<ion-grid>
+<ion-row>
+   <ion-col width-10></ion-col>
+  
+
+    <ion-list>
+
+     <!--  <ion-item-sliding class="adeek" #slidingItem0>
+          <ion-item no-lines text-wrap>
+            
+             <ion-icon name="body" item-left></ion-icon>
+     <h2> University: {{(user|async) ?.university }} </h2>
+<h2> Name: {{user?.name}} </h2>
+          </ion-item>
+           <ion-item-options>
+      
+          <button ion-button (click)="change('name',slidingItem0)">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+           </ion-item-options>
+       </ion-item-sliding>-->
+
+           <ion-item no-lines class="adeek" text-wrap (click)="change('name')">
+          <ion-icon name="body" item-left></ion-icon>
+      Name : {{user?.name}}
+          </ion-item> 
+
+   <!-- <ion-item-sliding class="adeek" #slidingItem>
+          <ion-item no-lines text-wrap>
+            
+             <ion-icon name="school" item-left></ion-icon>
+    <h2> University: {{(user|async) ?.university }} </h2>-->
+<!--  <h2> University: {{user?.university}} </h2>
+          </ion-item>
+           <ion-item-options>
+      
+          <button ion-button (click)="change('university',slidingItem)">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+    </ion-item-options>
+       </ion-item-sliding> -->
+
+            <ion-item no-lines class="adeek" text-wrap (click)="change('university')">
+          <ion-icon name="school" item-left></ion-icon>
+      University : {{user?.university}}
+          </ion-item> 
+
+   <!--     <ion-item-sliding class="adeek" #slidingItem10>
+          <ion-item no-lines text-wrap>
+            
+             <ion-icon name="school" item-left></ion-icon>
+    <h2> University: {{(user|async) ?.university }} </h2>-->
+
+
+<!--  <h2> Degree: {{user?.degree}} </h2>
+          </ion-item>
+           <ion-item-options>
+          <button ion-button (click)="degree(slidingItem10)">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+    </ion-item-options>
+          </ion-item-sliding> -->
+
+               <ion-item no-lines class="adeek" text-wrap (click)="degree()">
+          <ion-icon name="school" item-left></ion-icon>
+      Degree : {{user?.degree}}
+          </ion-item> 
+          
+           <!-- <ion-item-sliding class="adeek" #slidingItem1>
+        <ion-item no-lines text-wrap>
+          <ion-icon name="brush" item-left> </ion-icon>
+          <h2> Skills: {{user?.Skills}} </h2> 
+        </ion-item>
+      <ion-item-options>
+          <button ion-button (click)="change('skills',slidingItem1)">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+    </ion-item-options>
+    </ion-item-sliding> -->
+
+
+     <ion-item no-lines class="adeek" text-wrap (click)="change('skills')">
+          <ion-icon name="brush" item-left></ion-icon>
+      Skills : {{user?.Skills}}
+          </ion-item>
+
+ <!-- <ion-item-sliding class="adeek" #slidingItem2>
+          <ion-item no-lines text-wrap>
+         <ion-icon name="game-controller-b" item-left></ion-icon>
+      Doing: {{user?.type}}
+          </ion-item>
+             <ion-item-options>
+          <button ion-button (click)="doing(slidingItem2)">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+    </ion-item-options> 
+     </ion-item-sliding>
+     -->
+
+     <ion-item no-lines class="adeek" text-wrap (click)="doing()">
+          <ion-icon name="game-controller-b" item-left></ion-icon>
+      Doing : {{user?.type}}
+          </ion-item>
+
+
+    
+
+          <ion-item no-lines class="adeek" >
+        <ion-icon name="calendar" item-left></ion-icon>
+      Join Date: {{user?.JoinDate}}
+          </ion-item>
+          <ion-item no-lines class="adeek" >
+        <ion-icon name="calendar" item-left></ion-icon>
+      EndDate: {{user?.EndDate}}
+          </ion-item>
+
+    <!--      <ion-item-sliding class="adeek" #slidingItem3>
+          <ion-item no-lines text-wrap>
+           <ion-icon name="mail" item-left></ion-icon>
+       Email: {{user?.email}}
+          </ion-item>
+             <ion-item-options>
+          <button ion-button (click)="change('email',slidingItem3)">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+    </ion-item-options>
+ </ion-item-sliding> -->
+       
+
+  <ion-item no-lines class="adeek" text-wrap (click)="change('email')">
+          <ion-icon name="mail" item-left></ion-icon>
+      Email : {{user?.email}}
+          </ion-item>
+
+  <ion-item no-lines class="adeek" text-wrap (click)="change('phone')">
+          <ion-icon name="call" item-left></ion-icon>
+      Phone : {{user?.phone}}
+          </ion-item>
+             
+         <!--     <ion-item has-header class="adeek">
+                 <ion-icon name="call" item-left></ion-icon>
+    <ion-label>University:</ion-label>
+    <ion-input [(ngModel)]="this.user.university" type="text" placeholder="....."></ion-input>
+  </ion-item> -->
+
+   
+        
+          
+   
+
+      
+ 
+    </ion-list>
+  
+   <ion-col width-10></ion-col>
+</ion-row>
+  
+</ion-grid>
+  </div>
+    
+  <!--  <button ion-button (click)="done()">
+      CREATE GROUP
+    </button>-->
+</ion-content>
