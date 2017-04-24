@@ -13,14 +13,7 @@ import * as firebase from 'firebase';
 export class AuthData {
 
 fireAuth:any;
-  firebaseConfig ={
 
-   apiKey: "AIzaSyDvpUAZE1EdrJQw4I081TRwCBC0Xi_lICI",
-    authDomain: "test-c6478.firebaseapp.com",
-    databaseURL: "https://test-c6478.firebaseio.com",
-    storageBucket: "test-c6478.appspot.com",
-    messagingSenderId: "864144432964"
-}
 secondaryApp;
   constructor(public af: AngularFire) {
     af.auth.subscribe( user => {
