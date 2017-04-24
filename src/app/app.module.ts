@@ -31,20 +31,7 @@ import {ImageModalPage} from '../pages/image-modal/image-modal';
 
 
 
-export const firebaseConfig ={
 
-   apiKey: "AIzaSyDvpUAZE1EdrJQw4I081TRwCBC0Xi_lICI",
-    authDomain: "test-c6478.firebaseapp.com",
-    databaseURL: "https://test-c6478.firebaseio.com",
-    storageBucket: "test-c6478.appspot.com",
-    messagingSenderId: "864144432964"
-}
-//var secondaryApp = firebase.initializeApp(firebaseConfig, "Secondary");
-
-const myFirebaseAuthConfig = {
-  provider : AuthProviders.Password,
-  method : AuthMethods.Password
-}
 
 
 @NgModule({
